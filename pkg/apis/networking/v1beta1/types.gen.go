@@ -72,7 +72,7 @@ type DestinationRuleList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []DestinationRule `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*DestinationRule `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
 //
@@ -120,10 +120,10 @@ type GatewayList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []Gateway `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*Gateway `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// please upgrade the proto package
+//
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // `ProxyConfig` exposes proxy level configuration options.
@@ -165,7 +165,7 @@ type ProxyConfigList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []ProxyConfig `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*ProxyConfig `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
 //
@@ -222,7 +222,7 @@ type ServiceEntryList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []ServiceEntry `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*ServiceEntry `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
 //
@@ -271,7 +271,7 @@ type SidecarList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []Sidecar `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*Sidecar `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
 //
@@ -325,10 +325,10 @@ type VirtualServiceList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []VirtualService `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*VirtualService `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// please upgrade the proto package
+//
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // WorkloadEntry enables specifying the properties of a single non-Kubernetes workload such a VM or a bare metal services that can be referred to by service entries.
@@ -377,10 +377,10 @@ type WorkloadEntryList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []WorkloadEntry `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*WorkloadEntry `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// please upgrade the proto package
+//
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // `WorkloadGroup` enables specifying the properties of a single workload for bootstrap and
@@ -431,5 +431,5 @@ type WorkloadGroupList struct {
 	v1.TypeMeta `json:",inline"`
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
-	Items       []WorkloadGroup `json:"items" protobuf:"bytes,2,rep,name=items"`
+	Items       []*WorkloadGroup `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
