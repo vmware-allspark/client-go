@@ -3,7 +3,7 @@ module istio.io/client-go
 go 1.21
 
 require (
-	istio.io/api v1.19.0-alpha.1.0.20240312010456-c6ba867f734d
+	istio.io/api v1.19.0-alpha.1.0.20240314033334-65c5c282bf63
 	k8s.io/apimachinery v0.29.0
 	k8s.io/client-go v0.29.0
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1
@@ -41,7 +41,7 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20240116215550-a9fa1716bcac // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20240116215550-a9fa1716bcac // indirect
-	google.golang.org/protobuf v1.32.0 // indirect
+	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
